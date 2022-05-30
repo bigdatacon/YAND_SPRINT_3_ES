@@ -211,3 +211,14 @@ ans = requests.get("http://127.0.0.1:9200/table2/_search", json =
     }
 }
 )
+
+
+#Записать в эластик иначе  через функицю и прочитать
+def save_one( doc: dict, index: str, res):
+    # self.__get_connection().index(index=index, id=doc['id'], document=doc)
+    res.index(index=index, id=doc['id'], document=doc)
+
+#запись
+print(save_one({'id': "test"}, 'ind', res))
+#чтение
+print(res.search(index='ind'))

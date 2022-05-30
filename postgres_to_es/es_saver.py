@@ -7,9 +7,6 @@ from settings.settings import Settings
 from settings.schemes import Schemes
 from resources import backoff
 
-
-
-
 logger = logging.getLogger(__name__)
 
 
